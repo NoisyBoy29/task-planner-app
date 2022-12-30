@@ -1,13 +1,140 @@
-body {
+.content {
+  max-width: 720px; 
+  margin: 0 auto;
+}
+/* Masukan padding dan border total lebar dan tinggi elemen */
+* {
+  box-sizing: border-box;
+}
+/* Ukuran pada header */
+h2{
+  font-size: 24px;
+}
+/* Warna backgroun aplikasi */
+body{
+    background: #222831;
+}
+/* Menghapus margin dan padding dari List */
+ul {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+}
+/* Style dari list items */
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 55px;
+  font-size: 24px;
+  list-style-type: none;
+  transition: 0.2s;
+  
+  /* membuat item daftar tidak dapat dipilih */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Membuat efek warna berbeda pada garis ganjil */
+ul li:nth-child(odd) {
+  background: #00ADB5;
+}
+
+/* Membuat efek warna berbeda pada garis genap */
+ul li:nth-child(even) {
+  background: #ffb703;
+}
+
+/* Warna latar belakang lebih gelap saat diarahkan */
+ul li:hover {
+  background: #9590A8;
+}
+
+/* (UPDATE)Saat diklik, tambahkan warna latar belakang dan coret teks */
+ul li.checked {
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
+}
+
+/* Tambahkan tanda "dicentang" saat diklik */
+ul li.checked::before {
+  content: '';
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+/* Style dari tombol hapus */
+.close {
+  color: white;
+  position: absolute;
+  background: #020122;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+}
+
+.close:hover {
+  background-color: #e74c3c;
+  color: white;
+}
+
+/* Style  header */
+.header {
+  background-color: #020122;
+  padding: 40px 50px;
+  color: #fff;
+  text-align: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+h2{
+  background: transparent;
+}
+
+/* Jarak antara header dengan TaskList */
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style  input */
+input {
+  margin: 0;
+  border: none;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  width: 75%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+  background-color: #fff;
+}
+
+/* Style button Add */
+.add-button {
+  padding: 10px;
+  width: 25%;
+  background: #d9d9d9;
+  color: #555;
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.add-button:hover {
+  background-color: #bbb;
 }
