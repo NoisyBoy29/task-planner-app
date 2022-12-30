@@ -13,10 +13,10 @@ Kelompok :
 
 1. Clone dari project ini atau langsung download dengan format zip
 
-2. ###`npx json-server --watch data/db.json --port 8000`
+##`npx json-server --watch data/db.json --port 8000`
 
-Ketikan perintah diatas pada direktori folder melalui cmd
+2. Ketikan perintah diatas pada direktori folder melalui cmd
 
-3. ###`npm run start`
+###`npm run start`
 
-Ketikan perintah diatas pada direktori folder melalui cmd
+3.Ketikan perintah diatas pada direktori folder melalui cmd
